@@ -19,7 +19,7 @@ $risultato = mysqli_query($conn, $sql);
     <tbody>
         <?php while ($riga = mysqli_fetch_assoc($risultato)): ?>
         <tr>
-            <td><?= htmlspecialchars($riga['id_gnere'])?></td>
+            <td><?= htmlspecialchars($riga['id_genere'])?></td>
             <td><?= htmlspecialchars($riga['nome']) ?></td>
             <td>
                 <a href="modifica.php?id=<?= $riga['id_genere'] ?>" class="btn btn-sm btn-outline-primary">Modifica</a>

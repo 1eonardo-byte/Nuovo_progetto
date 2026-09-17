@@ -6,7 +6,8 @@
         <title>Archiviazione film - Backend</title>
 
         <!--Bootstrap 5 CSS, caricato da CDN-->
-        <link href="https://cdn.jsdelivr.net/npm/[email protected]/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
 
     </head>
     <body class="bg-light">
@@ -24,15 +25,3 @@
   </nav>
  
   <main class="container">
-  </main>
- 
- <footer class="text-center text-muted py-4 mt-5">
-   <small>Archivio Film — Progetto di tirocinio</small>
- </footer>
-
- <!-- Bootstrap 5 JS (necessario per componenti interattivi come menu a tendina, modali, ecc.) -->
- <script src="https://cdn.jsdelivr.net/npm/[email protected]/dist/js/bootstrap.bundle.min.js"></script>
-</body>
-
-</html>
-

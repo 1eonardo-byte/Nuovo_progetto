@@ -17,7 +17,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST'){
     exit;
 }
 
-$sql = "SELECT nome FROM genere WHERE id_genere = ?";
+$sql = "SELECT nome FROM generi WHERE id_genere = ?";
 $stmt = mysqli_prepare($conn, $sql);
 mysqli_stmt_bind_param($stmt, "i", $id);
 mysqli_stmt_execute($stmt);
