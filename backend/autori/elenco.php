@@ -2,7 +2,7 @@
 require "../../config/db.php";
 require "../../includes/header.php";
 
-$sql = "SELECT id_autore, nome, cognome, nazionalità, data_nascita FROM autori ORDEE BY cognome, nome";
+$sql = "SELECT id_autore, nome, cognome, nazionalita, data_nascita FROM autori ORDER BY cognome, nome";
 $risultato = mysqli_query($conn,$sql);
 ?>
 
