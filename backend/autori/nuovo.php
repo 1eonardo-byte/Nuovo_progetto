@@ -11,7 +11,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
     $nome = trim($_POST['nome'] ?? '');
     $cognome = trim($_POST['cognome'] ?? '');
     $nazionalita = trim($_POST['nazionalita'] ?? '');
-    $data_nascita = trim($_POST['nazionalita'] ?? '');
+    $data_nascita = trim($_POST['data_nascita'] ?? '');
 
     if ($nome === ''){
         $errori[] = "il nome è obbligatorio ";
@@ -26,9 +26,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
         $data_nascita_db = $data_nascita !== '' ? $data_nascita : null;
 
         $sql = "INSERT INTO autori (nome, cognome, nazionalita, data_nascita) VALUES (?, ?, ?, ?)";
-        $stmt =mysqli_prepare($conn, $sql);
+        $stmt = mysqli_prepare($conn, $sql);
         mysqli_stmt_bind_param($stmt, "ssss", $nome, $cognome, $nazionalita_db, $data_nascita_db);
         mysqli_stmt_execute($stmt);
+
 
         header("Location: elenco.php");
         exit;
@@ -49,6 +50,7 @@ require "../../includes/header.php";
         </ul>
     </div>
     <?php endif; ?>
+    <form method="POST" action="nuovo.php">
 
     <div class="card shadow-sm" style="max-whidth: 500px;">
         <div class="card-body">
