@@ -35,7 +35,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
     }
 }
 
-require "../../icludes/header.php";
+require "../../includes/header.php";
 ?>
 
 <h2 class="mb-3">Nuovo Autore</h2>
